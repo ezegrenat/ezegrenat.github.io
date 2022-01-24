@@ -45,7 +45,7 @@ Se utilizaron dos datasets:
 ## Resumen de la limpieza de datos 
 El dataframe de los viajes no tiene valores vacíos. Al ver la variación de los minutos de viaje se encuentran unos registros a tener en cuenta.  
 
-![variacion_minutos_viaje](/img/posts/1_variacion_minutos_viaje.png)
+![variacion_minutos_viaje](/img/1_variacion_minutos_viaje.png)
 
 
 Teniendo en cuenta que se permiten viajes de hasta 60 minutos (luego se aplican pequeñas multas) y el 99% de los datos se adecúan bien a esta norma, opté por eliminar los viajes con duración superior a 76 minutos, de forma en que no se trabaje con viajes que no representen las normas de EcoBici y se deje cierto rango para los viajes que se excedieron del tiempo máximo. 
@@ -54,7 +54,7 @@ Teniendo en cuenta que se permiten viajes de hasta 60 minutos (luego se aplican 
 Se comenzó comparando la cantidad de viajes registrados para cada estación, teniendo en cuenta que el verano está “incompleto” por no tener los datos de los viajes registrados posteriormente al 3 de diciembre. 
 
 
-![variacion_estacion](/img/posts/2_viajes_por_estacion.png)
+![variacion_estacion](/img/2_viajes_por_estacion.png)
 
 
 Se puede ver que la estación con mayor cantidad de viajes registrados es el verano, a pesar de que los datos apenas llegan al 3 de diciembre. Para las demás estaciones la demanda es muy similar. 
@@ -62,7 +62,6 @@ Se puede ver que la estación con mayor cantidad de viajes registrados es el ver
 Al ver cómo varía la cantidad de viajes para cada estación, se encuentra un gran descenso en los fines de semana, fenómeno que se puede atribuir a que en estos días hay menos tránsito relacionado a la actividad laboral y además no hay viajes gratuitos. 
 
 
-![variacion_semana](/img/posts/3_variacion_semana.png)
 
 
 El verano no sólo se mantiene mas alto respecto a las demás estaciones, sino que también es mas “resistente” a la baja en la cantidad de viajes registrados que se da para las demás estaciones durante los fines de semana. 
@@ -71,15 +70,13 @@ El verano no sólo se mantiene mas alto respecto a las demás estaciones, sino q
 Para la variación de la cantidad de viajes registrados respecto a los horarios del día se encuentra un comportamiento similar para las distintas temporadas, con la salvedad de que el otoño, el invierno y la primavera tienen su pico cerca de las 17 y el verano lo tiene “retrasado” a las 18. 
 
 
-![variacion_dia](/img/posts/5_variacion_dia.png)
-
 
 Otra particularidad es que la primavera registra una menor cantidad de viajes que el invierno entre las 10 y las 18, a pesar de que se dieron mas viajes en la primera que en la segunda.
 
 El siguiente diagrama de caja muestra la variación de los viajes registrados según condiciones climáticas. Cómo sabemos, la cantidad de viajes es mayor con el clima despejado y baja cuando este empeora. 
 
 
-![variacion_clima](/img/posts/4_variación_clima.png)
+
 
 
 Condiciones climáticas favorables ayudan a crecer el número de bicicletas usadas por día. 
@@ -87,7 +84,7 @@ Condiciones climáticas favorables ayudan a crecer el número de bicicletas usad
 ¿Hay alguna correlación entre la temperatura y la cantidad de viajes que se registran? Ya se vio anteriormente que el verano, la estación que registra mayores temperaturas, es aquel que cuenta con una mayor cantidad de viajes y las demás estaciones tenían cantidades similares a pesar de tener temperaturas promedio muy distintas. Al ver el siguiente gráfico de dispersión pareciera que existe una moderada correlación. 
 
 
-![relacion_temperatura](/img/posts/6_relacion_temperatura.png)
+
 
 
 Se observa una nube donde se contempla la concentración en la cantidad para las 3 condiciones climaticas. Se obtiene una correlación ≈0,43.
@@ -95,10 +92,6 @@ Se observa una nube donde se contempla la concentración en la cantidad para las
 Al ver cómo queda el gráfico de dispersión para la humedad y el viento, la correlación con la cantidad de viajes es muy baja. 
 
 
-![relacion_humedad](/img/posts/7_relacion_humedad.png)
-
-
-![relacion_viento](/img/posts/8_relacion_viento.png)
 
 
 Finalmente tenemos que las correlación mas alta con la cantidad de viajes la tiene la hora del día, obteniendo un valor ≈0,60.  
