@@ -45,7 +45,7 @@ Se utilizaron dos datasets:
 ## Resumen de la limpieza de datos 
 El dataframe de los viajes no tiene valores vacíos. Al ver la variación de los minutos de viaje se encuentran unos registros a tener en cuenta.  
 
-![variacion_minutos_viaje](/img/bg-about.png)
+![variacion_minutos_viaje](/img/1_variacion_minutos_viaje.png)
 Teniendo en cuenta que se permiten viajes de hasta 60 minutos (luego se aplican pequeñas multas) y el 99% de los datos se adecúan bien a esta norma, opté por eliminar los viajes con duración superior a 76 minutos, de forma en que no se trabaje con viajes que no representen las normas de EcoBici y se deje cierto rango para los viajes que se excedieron del tiempo máximo. 
 
 ## Análisis exploratorio 
