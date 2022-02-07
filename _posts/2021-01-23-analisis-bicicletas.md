@@ -123,7 +123,7 @@ Las estaciones cercanas a las avenidas Corrientes y Córdoba, que son de las má
 [ver mapa en tamaño completo](https://ezegrenat.github.io/analisis-bicicletas-ecobici/mapa_ba_grafo.html)
 
 ## Conclusiones: 
- - El 93.57% de los viajes fueron hechos por usuarios que tomaron la bicicleta en una estación para dejarla en otra distinta. El área de mayor concentración de viajes fue el “corredor” que comienza en Retiro y termina en las Barrancas de Belgrano, seguida por la zona de los barrios Monserrat, San Nicolás, Constitución, Caballito y Palermo. El restante 6.43%, de aquellos que tomaron la bicicleta y la dejaron en la misma estación, utilizaron las bicicletas mayoritariamente en zonas cercanas a puntos donde es común realizar actividades recreativas, cómo pueden ser los bosques de Palermo o la Reserva Ecológica Costanera Sur. 
+ - El 93.57% de los viajes fueron hechos por usuarios que tomaron la bicicleta en una estación para dejarla en otra distinta. El área de mayor concentración de viajes fue el “corredor” que comienza en Retiro y termina en las Barrancas de Belgrano, seguida por la zona de los barrios Monserrat, San Nicolás, Constitución y Palermo. El restante 6.43%, de aquellos que tomaron la bicicleta y la dejaron en la misma estación, utilizaron las bicicletas mayoritariamente en zonas cercanas a puntos donde es común realizar actividades recreativas, cómo pueden ser los bosques de Palermo o la Reserva Ecológica Costanera Sur. 
 
 
  - El otoño, la primavera y el invierno tuvieron un marcado descenso de la cantidad de viajes los fines de semana, mientras que el verano mostró un descenso menos abrupto en estos días.
