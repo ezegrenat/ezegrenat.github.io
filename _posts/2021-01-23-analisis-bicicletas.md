@@ -11,7 +11,7 @@ En los últimos años el transporte en bicicleta ha ganado prominencia en la Ciu
 
 Cambios en la infraestructura, cómo son la implementación de la red de ciclovías y el Sistema de Transporte Público de Bicicletas (STPB), son claves para fomentar el uso de estas y transicionar hacia una ciudad con una movilidad más sustentable.
 
-**El objetivo de este proyecto es utilizar distintas visualizaciones hechas en R para entender mejor cómo se dio el uso de las bicicletas EcoBici del STPB en 2021, bajo distintas condiciones como pueden ser las estaciones del año, el transcurso de la semana y distintas condiciones climáticas.** 
+**El objetivo de este proyecto es utilizar distintas visualizaciones hechas en R para entender mejor cómo se dio el uso de las bicicletas EcoBici del STPB en 2021, bajo distintas condiciones como pueden ser las estacionarias, climatológicas y aquellas referidas a características del espacio urbano porteño.** 
 
     
 
@@ -51,7 +51,7 @@ Teniendo en cuenta que se permiten viajes de hasta 60 minutos (luego se aplican 
 Además, se removieron los viajes en los que se involucraron las estaciones “Balboa Definitivo” y 006 - planeada”, cuyos nombres no figuran entre las lista de estaciones que ecobici tiene registrada.
 
 
-## Análisis exploratorio 
+## Análisis del tránsito bajo factores naturales 
 Se comenzó comparando la cantidad de viajes registrados para cada estación, teniendo en cuenta que el verano está “incompleto” por no tener los datos de los viajes registrados posteriormente al 3 de diciembre. 
 ![variacion_estacion](/img/2_viajes_por_estacion.png)
 Se puede ver que la estación con mayor cantidad de viajes registrados es el verano, a pesar de que los datos apenas llegan al 3 de diciembre. Para las demás estaciones la demanda es muy similar. 
@@ -89,6 +89,14 @@ Al ver cómo queda el gráfico de dispersión para la humedad y el viento, la co
 
 
 Finalmente tenemos que las correlación mas alta con la cantidad de viajes la tiene la hora del día, obteniendo un valor ≈0,60.  
+
+## Análisis del tránsito bajo factores humanos 
+
+Los datos sobre las conexiones más comunes pueden ser utilizados para la planificación de nueva infraestructura dedicada específicamente para bicicletas, como son las ciclovías. Para ver esto, se clasificaron los viajes de dos formas: del tipo estación a -> estación a en los que el usuario toma la bicicleta en una estación a y luego la vuelve a dejar en esta, y del tipo estación a -> estación b, aquellos en los que el usuario toma la bicicleta en una estación a y luego la deja en otra estación b. 
+
+Se encontró que el 93.57% de los viajes son del tipo a -> b y el restante 6.43% corresponde a viajes del tipo a->a. Al ver cuáles son los viajes más utilizados, se encuentra que los más comunes son los del tipo a->a, en particular siendo a una estación cercana a una plaza o un parque. 
+
+
 
 
 ## Conclusiones: 
