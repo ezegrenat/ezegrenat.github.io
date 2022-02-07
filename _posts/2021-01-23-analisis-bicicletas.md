@@ -42,6 +42,7 @@ Se utilizaron dos datasets:
 | modelo_bicicleta | string |
 | id_recorrido | string |
 
+
 ## Resumen de la limpieza de datos 
 El dataframe de los viajes no tiene valores vacíos. Al ver la variación de los minutos de viaje se encuentran unos registros a tener en cuenta.  
 
@@ -59,16 +60,16 @@ Se puede ver que la estación con mayor cantidad de viajes registrados es el ver
 Al ver cómo varía la cantidad de viajes para cada estación, se encuentra un gran descenso en los fines de semana, fenómeno que se puede atribuir a que en estos días hay menos tránsito relacionado a la actividad laboral y además no hay viajes gratuitos. 
 
 ![variacion_semana](/img/3_variacion_semana.png)
-El verano no sólo se mantiene mas alto respecto a las demás estaciones, sino que también es mas “resistente” a la baja en la cantidad de viajes registrados que se da para las demás estaciones durante los fines de semana. 
+El verano no sólo se mantiene mas alto respecto a las demás estaciones, sino que también es más “resistente” a la baja en la cantidad de viajes registrados que se da para las demás estaciones durante los fines de semana. 
 
 
 Para la variación de la cantidad de viajes registrados respecto a los horarios del día se encuentra un comportamiento similar para las distintas temporadas, con la salvedad de que el otoño, el invierno y la primavera tienen su pico cerca de las 17 y el verano lo tiene “retrasado” a las 18. 
 
 ![variacion_dia](/img/5_variacion_dia.png)
 
-Otra particularidad es que la primavera registra una menor cantidad de viajes que el invierno entre las 10 y las 18, a pesar de que se dieron mas viajes en la primera que en la segunda.
+Otra particularidad es que la primavera registra una menor cantidad de viajes que el invierno entre las 10 y las 18, a pesar de que se dieron más viajes en la primera que en la segunda.
 
-El siguiente diagrama de caja muestra la variación de los viajes registrados según condiciones climáticas. Cómo sabemos, la cantidad de viajes es mayor con el clima despejado y baja cuando este empeora. 
+El siguiente diagrama de caja muestra la variación de los viajes registrados según condiciones climáticas. Como sabemos, la cantidad de viajes es mayor con el clima despejado y baja cuando este empeora. 
 
 ![variacion_clima](/img/4_variación_clima.png)
 
@@ -88,19 +89,19 @@ Al ver cómo queda el gráfico de dispersión para la humedad y el viento, la co
 ![relacion_viento](/img/8_relacion_viento.png)
 
 
-Finalmente tenemos que las correlación mas alta con la cantidad de viajes la tiene la hora del día, obteniendo un valor ≈0,60.  
+Finalmente tenemos que las correlación más alta con la cantidad de viajes la tiene la hora del día, obteniendo un valor ≈0,60.  
 
 ## Análisis del tránsito bajo factores humanos 
 
-Los datos sobre las conexiones más comunes pueden ser utilizados para la planificación de nueva infraestructura dedicada específicamente para bicicletas, como son las ciclovías. Para ver esto, se clasificaron los viajes de dos formas: del tipo estación a -> estación a en los que el usuario toma la bicicleta en una estación a y luego la vuelve a dejar en esta, y del tipo estación a -> estación b, aquellos en los que el usuario toma la bicicleta en una estación a y luego la deja en otra estación b. 
+Los datos sobre las conexiones más comunes pueden ser utilizados para la planificación de infraestructura dedicada específicamente para bicicletas, como son las ciclovías. Para ver esto, se clasificaron los viajes de dos formas: del tipo estación a -> estación a, en los que el usuario toma la bicicleta en una estación a y luego la vuelve a dejar en esta, y del tipo estación a -> estación b, aquellos en los que el usuario toma la bicicleta en una estación a y luego la deja en otra estación b. 
 
 Se encontró que el 93.57% de los viajes son del tipo a -> b y el restante 6.43% corresponde a viajes del tipo a->a. Al ver cuáles son los viajes más utilizados, se encuentra que los más comunes son los del tipo a->a, en particular siendo a una estación cercana a una plaza o un parque. 
 
 ![viajes_mas_utilizados](/img/9_viajes_mas_utilizados.png) 
 
-La combinación mas popular es Julieta Lanteri -> Julieta Lanteri, estación que está cercana a la Reserva Ecológica Costanera Sur y lugares comunes para hacer actividades recreativas como son el Puente de la Mujer y el parque Mujeres Argentinas. Lo mismo ocurre para Godoy Cruz y Libertador, cercano a la Plaza Holanda, el Jardín Japonés y el Paseo del Rosedal, para la estación García del Río, cercano al Parque Saavedra, para la estación Parque Centenario y la mayoría de combinaciones que se encuentran entre las más altas.  
+La combinación más popular es Julieta Lanteri -> Julieta Lanteri, estación que está cercana a la Reserva Ecológica Costanera Sur y lugares comunes para hacer actividades recreativas como son el Puente de la Mujer y el parque Mujeres Argentinas. Lo mismo ocurre para la estación Godoy Cruz y Libertador, que es cercana a la Plaza Holanda, el Jardín Japonés y el Paseo del Rosedal, para la estación García del Río, cercana al Parque Saavedra, para la estación Parque Centenario y para la mayoría de combinaciones que se encuentran entre las más altas.  
 
-¿Cuáles son las estaciones más comunes si restringimos que el origen sea distinto al destino? 
+¿Cuáles son las combinaciones más comunes si restringimos que el origen sea distinto al destino? 
 
 ![viajes_mas_utilizados_ab](/img/10_viajes_mas_utilizados_ab.png)
 
@@ -113,17 +114,20 @@ El siguiente gráfico interactivo ilustra las estaciones de bicicletas en Buenos
 
 <iframe src = "/img/mapa_ba_grafo.html" height = "800px" width = "100%"></iframe> 
 
-Se vuelve a encontrar una concentración en el corredor Retiro-Barrancas de Belgrano que luego baja a la zona de los barrios Monserrat, San Nicolás, Constitución, Caballito y Palermo. Luego, en zonas alejadas de la concentración, hay pares de estaciones con conexiones muy fuertes entre sí, como es el caso de San José de Flores y Galicia, y otras con conexiones muy tenues, cómo es en el caso de la estación “Plaza Éxodo Jujeño” del barrio Parque Chas con la estación “Agronomía II” del barrio homónimo. 
 
-Las estaciones cercanas a las avenidas Corrientes y Córdoba, que son de las más transitadas de la ciudad y recientemente han adquirido una red de ciclovías, establecen conexiones fuertes entre ellas.
 
+Se vuelve a encontrar una concentración en el corredor Retiro-Barrancas de Belgrano que luego baja a la zona de los barrios Monserrat, San Nicolás, Constitución, Caballito y Palermo. Luego, en zonas alejadas de la concentración, hay pares de estaciones con conexiones muy fuertes entre sí, como es el caso de San José de Flores y Galicia, y otras con conexiones muy tenues, como es en el caso de la estación “Plaza Éxodo Jujeño” del barrio Parque Chas con la estación “Agronomía II” del barrio homónimo. 
+
+Las estaciones cercanas a las avenidas Corrientes y Córdoba, que son de las más transitadas de la ciudad y recientemente han adquirido ciclovías, establecen conexiones fuertes entre ellas.
+
+[ver mapa en tamaño completo](https://ezegrenat.github.io/analisis-bicicletas-ecobici/mapa_ba_grafo.html)
 
 ## Conclusiones: 
- - El 93.57% de los viajes fueron de usuarios que tomaron la bicicleta en una estación para dejarla en otra distinta. El área de mayor concentración de viajes fue el “corredor” que comienza en Retiro y termina en las Barrancas de Belgrano, seguida por la zona de los barrios Monserrat, San Nicolás, Constitución, Caballito y Palermo. El restante 6.43%, de aquellos que tomaron la bicicleta y la dejaron en la misma estación, utilizaron las bicicletas mayoritariamente en zonas cercanas a puntos donde es común realizar actividades recreativas, cómo pueden ser los bosques de Palermo o la Reserva Ecológica Costanera Sur. 
+ - El 93.57% de los viajes fueron hechos por usuarios que tomaron la bicicleta en una estación para dejarla en otra distinta. El área de mayor concentración de viajes fue el “corredor” que comienza en Retiro y termina en las Barrancas de Belgrano, seguida por la zona de los barrios Monserrat, San Nicolás, Constitución, Caballito y Palermo. El restante 6.43%, de aquellos que tomaron la bicicleta y la dejaron en la misma estación, utilizaron las bicicletas mayoritariamente en zonas cercanas a puntos donde es común realizar actividades recreativas, cómo pueden ser los bosques de Palermo o la Reserva Ecológica Costanera Sur. 
 
 
  - El otoño, la primavera y el invierno tuvieron un marcado descenso de la cantidad de viajes los fines de semana, mientras que el verano mostró un descenso menos abrupto en estos días.
- - Los usuarios prefirieron condiciones climáticas mas favorables, como pueden ser los días despejados o nublados, y no aquellos en los que se dan lluvias.
+ - Los usuarios prefirieron condiciones climáticas más favorables, como pueden ser los días despejados o nublados, y no aquellos en los que se dan lluvias.
  - Hay una correlación moderada entre las temperaturas altas y la cantidad registrada de viajes.
  - No se encontró una correlación entre la velocidad del viento o la humedad y la cantidad de viajes.
  - Las actividades de mantenimiento de las bicicletas deberían hacerse a la noche, debido al bajo uso que estas tienen a estas horas. Remover algunas bicicletas a la noche no debería causar problema a los usuarios.
