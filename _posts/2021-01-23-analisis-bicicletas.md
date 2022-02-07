@@ -105,9 +105,11 @@ La combinación mas popular es Julieta Lanteri -> Julieta Lanteri, estación que
 ![viajes_mas_utilizados_ab](/img/10_viajes_mas_utilizados_ab.png)
 
 Los valores más altos son entre las estaciones San José de Flores y Galicia, estando la primera cerca de la estación de tren Flores. Luego, tenemos conexiones relacionadas al “corredor” que comienza en Retiro y termina sobre Barrancas de Belgrano, en el noreste de la ciudad. 
+
+
 Los sistemas de transporte pueden ser analizados como redes. La estructura de la red surge del flujo de personas (en nuestro caso bicicletas) a través de la ciudad, esta nos permite ver los distintos patrones de uso de parte de la ciudadanía y nos puede proveer información sobre factores sociológicos, económicos y geográficos en ciertas áreas.
 
-El siguiente gráfico interactivo ilustra las estaciones de bicicletas en diferentes áreas de Buenos Aires entre el 1 de enero y el 3 de diciembre de 2021. En este, cada nodo representa una estación que adquiere un radio mayor según la cantidad de viajes que llegaron o partieron de ella. Las conexiones entre este nodo y los demás son representadas por una recta de color blanco que será mas o menos marcada según la cantidad de viajes que haya existido entre estas dos. 
+El siguiente gráfico interactivo ilustra las estaciones de bicicletas en Buenos Aires como una red. En este, cada nodo representa una estación que adquiere un radio mayor según la cantidad de viajes que llegaron o partieron de ella. Las conexiones entre este nodo y los demás son representadas por una recta de color blanco que será mas o menos marcada según la cantidad de viajes que haya existido entre estas dos. 
 
 
 
