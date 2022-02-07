@@ -98,9 +98,16 @@ Se encontró que el 93.57% de los viajes son del tipo a -> b y el restante 6.43%
 
 ![viajes_mas_utilizados](/img/9_viajes_mas_utilizados.png) 
 
+La combinación mas popular es Julieta Lanteri -> Julieta Lanteri, estación que está cercana a la Reserva Ecológica Costanera Sur y lugares comunes para hacer actividades recreativas como son el Puente de la Mujer y el parque Mujeres Argentinas. Lo mismo ocurre para Godoy Cruz y Libertador, cercano a la Plaza Holanda, el Jardín Japonés y el Paseo del Rosedal, para la estación García del Río, cercano al Parque Saavedra, para la estación Parque Centenario y la mayoría de combinaciones que se encuentran entre las más altas.  
+
+¿Cuáles son las estaciones más comunes si restringimos que el origen sea distinto al destino? 
 
 ![viajes_mas_utilizados_ab](/img/10_viajes_mas_utilizados_ab.png)
 
+Los valores más altos son entre las estaciones San José de Flores y Galicia, estando la primera cerca de la estación de tren Flores. Luego, tenemos conexiones relacionadas al “corredor” que comienza en Retiro y termina sobre Barrancas de Belgrano, en el noreste de la ciudad. 
+Los sistemas de transporte pueden ser analizados como redes. La estructura de la red surge del flujo de personas (en nuestro caso bicicletas) a través de la ciudad, esta nos permite ver los distintos patrones de uso de parte de la ciudadanía y nos puede proveer información sobre factores sociológicos, económicos y geográficos en ciertas áreas.
+
+El siguiente gráfico interactivo ilustra las estaciones de bicicletas en diferentes áreas de Buenos Aires entre el 1 de enero y el 3 de diciembre de 2021. En este, cada nodo representa una estación que adquiere un radio mayor según la cantidad de viajes que llegaron o partieron de ella. Las conexiones entre este nodo y los demás son representadas por una recta de color blanco que será mas o menos marcada según la cantidad de viajes que haya existido entre estas dos. 
 
 
 
