@@ -111,7 +111,7 @@ Los sistemas de transporte pueden ser analizados como redes. La estructura de la
 
 El siguiente gráfico interactivo ilustra las estaciones de bicicletas en Buenos Aires como una red. En este, cada nodo representa una estación que adquiere un radio mayor según la cantidad de viajes que llegaron o partieron de ella. Las conexiones entre este nodo y los demás son representadas por una recta de color blanco que será mas o menos marcada según la cantidad de viajes que haya existido entre estas dos. 
 
-<iframe src = "/img/mapa_grafo.html" height = "800px" width = "100%"></iframe> 
+<iframe src = "/img/mapa_ba_grafo.html" height = "800px" width = "100%"></iframe> 
 
 Se vuelve a encontrar una concentración en el corredor Retiro-Barrancas de Belgrano que luego baja a la zona de los barrios Monserrat, San Nicolás, Constitución, Caballito y Palermo. Luego, en zonas alejadas de la concentración, hay pares de estaciones con conexiones muy fuertes entre sí, como es el caso de San José de Flores y Galicia, y otras con conexiones muy tenues, cómo es en el caso de la estación “Plaza Éxodo Jujeño” del barrio Parque Chas con la estación “Agronomía II” del barrio homónimo. 
 
