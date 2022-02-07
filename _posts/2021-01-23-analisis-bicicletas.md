@@ -111,9 +111,16 @@ Los sistemas de transporte pueden ser analizados como redes. La estructura de la
 
 El siguiente gráfico interactivo ilustra las estaciones de bicicletas en Buenos Aires como una red. En este, cada nodo representa una estación que adquiere un radio mayor según la cantidad de viajes que llegaron o partieron de ella. Las conexiones entre este nodo y los demás son representadas por una recta de color blanco que será mas o menos marcada según la cantidad de viajes que haya existido entre estas dos. 
 
-<iframe src = "/img/mapa_grafo.html" height = "800px" width = "100%"></iframe>
+<iframe src = "/img/mapa_grafo.html" height = "800px" width = "100%"></iframe> 
+
+Se vuelve a encontrar una concentración en el corredor Retiro-Barrancas de Belgrano que luego baja a la zona de los barrios Monserrat, San Nicolás, Constitución, Caballito y Palermo. Luego, en zonas alejadas de la concentración, hay pares de estaciones con conexiones muy fuertes entre sí, como es el caso de San José de Flores y Galicia, y otras con conexiones muy tenues, cómo es en el caso de la estación “Plaza Éxodo Jujeño” del barrio Parque Chas con la estación “Agronomía II” del barrio homónimo. 
+
+Las estaciones cercanas a las avenidas Corrientes y Córdoba, que son de las más transitadas de la ciudad y recientemente han adquirido una red de ciclovías, establecen conexiones fuertes entre ellas.
+
 
 ## Conclusiones: 
+ - El 93.57% de los viajes fueron de usuarios que tomaron la bicicleta en una estación para dejarla en otra distinta. El área de mayor concentración de viajes fue el “corredor” que comienza en Retiro y termina en las Barrancas de Belgrano, seguida por la zona de los barrios Monserrat, San Nicolás, Constitución, Caballito y Palermo. El restante 6.43%, de aquellos que tomaron la bicicleta y la dejaron en la misma estación, utilizaron las bicicletas mayoritariamente en zonas cercanas a puntos donde es común realizar actividades recreativas, cómo pueden ser los bosques de Palermo o la Reserva Ecológica Costanera Sur. 
+
 
  - El otoño, la primavera y el invierno tuvieron un marcado descenso de la cantidad de viajes los fines de semana, mientras que el verano mostró un descenso menos abrupto en estos días.
  - Los usuarios prefirieron condiciones climáticas mas favorables, como pueden ser los días despejados o nublados, y no aquellos en los que se dan lluvias.
