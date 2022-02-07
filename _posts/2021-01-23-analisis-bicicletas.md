@@ -96,9 +96,10 @@ Los datos sobre las conexiones más comunes pueden ser utilizados para la planif
 
 Se encontró que el 93.57% de los viajes son del tipo a -> b y el restante 6.43% corresponde a viajes del tipo a->a. Al ver cuáles son los viajes más utilizados, se encuentra que los más comunes son los del tipo a->a, en particular siendo a una estación cercana a una plaza o un parque. 
 
-Solarized dark             |  Solarized Ocean
-:-------------------------:|:-------------------------:
-![viajes_mas_utilizados](/img/9_viajes_mas_utilizados.png)  |  ![viajes_mas_utilizados_ab](/img/10_viajes_mas_utilizados_ab.png)
+![viajes_mas_utilizados](/img/9_viajes_mas_utilizados.png) 
+
+
+![viajes_mas_utilizados_ab](/img/10_viajes_mas_utilizados_ab.png)
 
 
 

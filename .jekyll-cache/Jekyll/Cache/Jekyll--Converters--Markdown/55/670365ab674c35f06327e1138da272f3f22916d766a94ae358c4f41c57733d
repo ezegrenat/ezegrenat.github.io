@@ -1,9 +1,9 @@
-I" <h2 id="motivación-y-objetivo">Motivación y objetivo</h2>
+I"�$<h2 id="motivación-y-objetivo">Motivación y objetivo</h2>
 <p>En los últimos años el transporte en bicicleta ha ganado prominencia en la Ciudad de Buenos Aires, ofreciéndole a los ciudadanos beneficios para su salud, flexibilidad y evitar el costo que pueden traer otros medios de transporte.</p>
 
 <p>Cambios en la infraestructura, cómo son la implementación de la red de ciclovías y el Sistema de Transporte Público de Bicicletas (STPB), son claves para fomentar el uso de estas y transicionar hacia una ciudad con una movilidad más sustentable.</p>
 
-<p><strong>El objetivo de este proyecto es utilizar distintas visualizaciones hechas en R para entender mejor cómo se dio el uso de las bicicletas EcoBici del STPB en 2021, bajo distintas condiciones como pueden ser las estaciones del año, el transcurso de la semana y distintas condiciones climáticas.</strong></p>
+<p><strong>El objetivo de este proyecto es utilizar distintas visualizaciones hechas en R para entender mejor cómo se dio el uso de las bicicletas EcoBici del STPB en 2021, bajo distintas condiciones como pueden ser las estacionarias, climatológicas y aquellas referidas a características del espacio urbano porteño.</strong></p>
 
 <h2 id="fuente-de-datos">Fuente de Datos</h2>
 <p>Se utilizaron dos datasets:</p>
@@ -98,7 +98,7 @@ Teniendo en cuenta que se permiten viajes de hasta 60 minutos (luego se aplican 
 
 <p>Además, se removieron los viajes en los que se involucraron las estaciones “Balboa Definitivo” y 006 - planeada”, cuyos nombres no figuran entre las lista de estaciones que ecobici tiene registrada.</p>
 
-<h2 id="análisis-exploratorio">Análisis exploratorio</h2>
+<h2 id="análisis-del-tránsito-bajo-factores-naturales">Análisis del tránsito bajo factores naturales</h2>
 <p>Se comenzó comparando la cantidad de viajes registrados para cada estación, teniendo en cuenta que el verano está “incompleto” por no tener los datos de los viajes registrados posteriormente al 3 de diciembre. 
 <img src="/img/2_viajes_por_estacion.png" alt="variacion_estacion" />
 Se puede ver que la estación con mayor cantidad de viajes registrados es el verano, a pesar de que los datos apenas llegan al 3 de diciembre. Para las demás estaciones la demanda es muy similar.</p>
@@ -133,6 +133,16 @@ El verano no sólo se mantiene mas alto respecto a las demás estaciones, sino q
 <p><img src="/img/8_relacion_viento.png" alt="relacion_viento" /></p>
 
 <p>Finalmente tenemos que las correlación mas alta con la cantidad de viajes la tiene la hora del día, obteniendo un valor ≈0,60.</p>
+
+<h2 id="análisis-del-tránsito-bajo-factores-humanos">Análisis del tránsito bajo factores humanos</h2>
+
+<p>Los datos sobre las conexiones más comunes pueden ser utilizados para la planificación de nueva infraestructura dedicada específicamente para bicicletas, como son las ciclovías. Para ver esto, se clasificaron los viajes de dos formas: del tipo estación a -&gt; estación a en los que el usuario toma la bicicleta en una estación a y luego la vuelve a dejar en esta, y del tipo estación a -&gt; estación b, aquellos en los que el usuario toma la bicicleta en una estación a y luego la deja en otra estación b.</p>
+
+<p>Se encontró que el 93.57% de los viajes son del tipo a -&gt; b y el restante 6.43% corresponde a viajes del tipo a-&gt;a. Al ver cuáles son los viajes más utilizados, se encuentra que los más comunes son los del tipo a-&gt;a, en particular siendo a una estación cercana a una plaza o un parque.</p>
+
+<p><img src="/img/9_viajes_mas_utilizados.png" alt="viajes_mas_utilizados" /></p>
+
+<p><img src="/img/10_viajes_mas_utilizados_ab.png" alt="viajes_mas_utilizados_ab" /></p>
 
 <h2 id="conclusiones">Conclusiones:</h2>
 
