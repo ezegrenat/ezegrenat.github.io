@@ -111,7 +111,7 @@ Los sistemas de transporte pueden ser analizados como redes. La estructura de la
 
 El siguiente gráfico interactivo ilustra las estaciones de bicicletas en Buenos Aires como una red. En este, cada nodo representa una estación que adquiere un radio mayor según la cantidad de viajes que llegaron o partieron de ella. Las conexiones entre este nodo y los demás son representadas por una recta de color blanco que será mas o menos marcada según la cantidad de viajes que haya existido entre estas dos. 
 
-
+<iframe src = "/_posts/mapa.html"></iframe>
 
 ## Conclusiones: 
 
