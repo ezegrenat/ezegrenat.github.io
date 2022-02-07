@@ -48,6 +48,9 @@ El dataframe de los viajes no tiene valores vacíos. Al ver la variación de los
 ![variacion_minutos_viaje](/img/1_variacion_minutos_viaje.png)
 Teniendo en cuenta que se permiten viajes de hasta 60 minutos (luego se aplican pequeñas multas) y el 99% de los datos se adecúan bien a esta norma, opté por eliminar los viajes con duración superior a 76 minutos, de forma en que no se trabaje con viajes que no representen las normas de EcoBici y se deje cierto rango para los viajes que se excedieron del tiempo máximo. 
 
+Además, se removieron los viajes en los que se involucraron las estaciones “Balboa Definitivo” y 006 - planeada”, cuyos nombres no figuran entre las lista de estaciones que ecobici tiene registrada.
+
+
 ## Análisis exploratorio 
 Se comenzó comparando la cantidad de viajes registrados para cada estación, teniendo en cuenta que el verano está “incompleto” por no tener los datos de los viajes registrados posteriormente al 3 de diciembre. 
 ![variacion_estacion](/img/2_viajes_por_estacion.png)
