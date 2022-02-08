@@ -123,11 +123,10 @@ Las estaciones cercanas a las avenidas Corrientes y Córdoba, que son de las má
 [ver mapa en tamaño completo](https://ezegrenat.github.io/analisis-bicicletas-ecobici/mapa_ba_grafo.html)
 
 ## Conclusiones: 
- - El uso que se les dio a las bicicletas EcoBici durante el año parece estar vinculado fuertemente a la actividad laboral, principalmente en la zona aledaña al “corredor” que comienza en Retiro y termina en las Barrancas de Belgrano. 
+ - El uso que se les dio a las bicicletas EcoBici durante 2021 parece estar vinculado fuertemente a las actividades que realizan los usuarios diariamente durante la semana, principalmente en la zona aledaña al “corredor” que comienza en Retiro y termina en las Barrancas de Belgrano.  
 
 
  - El otoño, la primavera y el invierno tuvieron un marcado descenso de la cantidad de viajes los fines de semana, mientras que el verano mostró un descenso menos abrupto en estos días.
- - Los usuarios prefirieron condiciones climáticas más favorables, como pueden ser los días despejados o nublados, y no aquellos en los que se dan lluvias.
  - Hay una correlación moderada entre las temperaturas altas y la cantidad registrada de viajes.
  - No se encontró una correlación entre la velocidad del viento o la humedad y la cantidad de viajes.
  - Las actividades de mantenimiento de las bicicletas deberían hacerse a la noche, debido al bajo uso que estas tienen a estas horas. Remover algunas bicicletas a la noche no debería causar problema a los usuarios.
