@@ -1,4 +1,4 @@
-I"�1<h2 id="motivación-y-objetivo">Motivación y objetivo</h2>
+I"/0<h2 id="motivación-y-objetivo">Motivación y objetivo</h2>
 <p>En los últimos años el transporte en bicicleta ha ganado prominencia en la Ciudad de Buenos Aires, ofreciéndole a los ciudadanos beneficios para su salud, flexibilidad y evitar el costo que pueden traer otros medios de transporte.</p>
 
 <p>Cambios en la infraestructura, cómo son la implementación de la red de ciclovías y el Sistema de Transporte Público de Bicicletas (STPB), son claves para fomentar el uso de estas y transicionar hacia una ciudad con una movilidad más sustentable.</p>
@@ -142,7 +142,7 @@ El verano no sólo se mantiene mas alto respecto a las demás estaciones, sino q
 
 <p><img src="/img/9_viajes_mas_utilizados.png" alt="viajes_mas_utilizados" /></p>
 
-<p>La combinación más popular es Julieta Lanteri -&gt; Julieta Lanteri, estación que está cercana a la Reserva Ecológica Costanera Sur y lugares comunes para hacer actividades recreativas como son el Puente de la Mujer y el parque Mujeres Argentinas. Lo mismo ocurre para la estación Godoy Cruz y Libertador, que es próxima a la Plaza Holanda, el Jardín Japonés y el Paseo del Rosedal; para la estación García del Río, cercana al Parque Saavedra; para la estación Parque Centenario y para la mayoría de combinaciones que se encuentran entre las más altas.</p>
+<p>La combinación más popular es Julieta Lanteri -&gt; Julieta Lanteri, estación que está cercana a la Reserva Ecológica Costanera Sur y lugares comunes para hacer actividades recreativas como son el Puente de la Mujer y el parque Mujeres Argentinas. Lo mismo ocurre para la estación Godoy Cruz y Libertador, que es próxima a la Plaza Holanda, el Jardín Japonés y el Paseo del Rosedal, para la estación García del Río, cercana al Parque Saavedra, para la estación Parque Centenario y para la mayoría de combinaciones que se encuentran entre las más altas.</p>
 
 <p>¿Cuáles son las combinaciones más comunes si restringimos que el origen sea distinto al destino?</p>
 
@@ -165,10 +165,9 @@ El verano no sólo se mantiene mas alto respecto a las demás estaciones, sino q
 <h2 id="conclusiones">Conclusiones:</h2>
 <ul>
   <li>
-    <p>El 93.57% de los viajes fueron hechos por usuarios que tomaron la bicicleta en una estación para dejarla en otra distinta. El área de mayor concentración de viajes fue el “corredor” que comienza en Retiro y termina en las Barrancas de Belgrano, seguida por la zona de los barrios Monserrat, San Nicolás, Constitución y Palermo. El restante 6.43%, de aquellos que tomaron la bicicleta y la dejaron en la misma estación, utilizaron las bicicletas mayoritariamente en zonas cercanas a puntos donde es común realizar actividades recreativas, cómo pueden ser los bosques de Palermo o la Reserva Ecológica Costanera Sur.</p>
+    <p>El uso que se les dio a las bicicletas EcoBici durante 2021 parece estar vinculado fuertemente a las actividades que realizan los usuarios diariamente durante los días de semana, principalmente en el noreste de la ciudad. Dentro del noreste, se encuentra el “corredor” que comienza en Retiro y termina en Barrancas de Belgrano, que es la zona con mayor concentración de viajes.</p>
   </li>
   <li>El otoño, la primavera y el invierno tuvieron un marcado descenso de la cantidad de viajes los fines de semana, mientras que el verano mostró un descenso menos abrupto en estos días.</li>
-  <li>Los usuarios prefirieron condiciones climáticas más favorables, como pueden ser los días despejados o nublados, y no aquellos en los que se dan lluvias.</li>
   <li>Hay una correlación moderada entre las temperaturas altas y la cantidad registrada de viajes.</li>
   <li>No se encontró una correlación entre la velocidad del viento o la humedad y la cantidad de viajes.</li>
   <li>Las actividades de mantenimiento de las bicicletas deberían hacerse a la noche, debido al bajo uso que estas tienen a estas horas. Remover algunas bicicletas a la noche no debería causar problema a los usuarios.</li>

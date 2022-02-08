@@ -99,7 +99,7 @@ Se encontró que el 93.57% de los viajes son del tipo a -> b y el restante 6.43%
 
 ![viajes_mas_utilizados](/img/9_viajes_mas_utilizados.png) 
 
-La combinación más popular es Julieta Lanteri -> Julieta Lanteri, estación que está cercana a la Reserva Ecológica Costanera Sur y lugares comunes para hacer actividades recreativas como son el Puente de la Mujer y el parque Mujeres Argentinas. Lo mismo ocurre para la estación Godoy Cruz y Libertador, que es próxima a la Plaza Holanda, el Jardín Japonés y el Paseo del Rosedal; para la estación García del Río, cercana al Parque Saavedra; para la estación Parque Centenario y para la mayoría de combinaciones que se encuentran entre las más altas.  
+La combinación más popular es Julieta Lanteri -> Julieta Lanteri, estación que está cercana a la Reserva Ecológica Costanera Sur y lugares comunes para hacer actividades recreativas como son el Puente de la Mujer y el parque Mujeres Argentinas. Lo mismo ocurre para la estación Godoy Cruz y Libertador, que es próxima a la Plaza Holanda, el Jardín Japonés y el Paseo del Rosedal, para la estación García del Río, cercana al Parque Saavedra, para la estación Parque Centenario y para la mayoría de combinaciones que se encuentran entre las más altas.  
 
 ¿Cuáles son las combinaciones más comunes si restringimos que el origen sea distinto al destino? 
 
@@ -123,7 +123,7 @@ Las estaciones cercanas a las avenidas Corrientes y Córdoba, que son de las má
 [ver mapa en tamaño completo](https://ezegrenat.github.io/analisis-bicicletas-ecobici/mapa_ba_grafo.html)
 
 ## Conclusiones: 
- - El uso que se les dio a las bicicletas EcoBici durante 2021 parece estar vinculado fuertemente a las actividades que realizan los usuarios diariamente durante la semana, principalmente en la zona aledaña al “corredor” que comienza en Retiro y termina en las Barrancas de Belgrano.  
+ - El uso que se les dio a las bicicletas EcoBici durante 2021 parece estar vinculado fuertemente a las actividades que realizan los usuarios diariamente durante los días de semana, principalmente en el noreste de la ciudad. Dentro del noreste, se encuentra el "corredor" que comienza en Retiro y termina en Barrancas de Belgrano, que es la zona con mayor concentración de viajes. 
 
 
  - El otoño, la primavera y el invierno tuvieron un marcado descenso de la cantidad de viajes los fines de semana, mientras que el verano mostró un descenso menos abrupto en estos días.
