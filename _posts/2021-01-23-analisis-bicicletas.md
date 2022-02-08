@@ -133,5 +133,5 @@ Las estaciones cercanas a las avenidas Corrientes y Córdoba, que son de las má
 
 
 ## Ver el código
- - [código en html](https://ezegrenat.github.io/analisis-bicicletas-ecobici/analisis_bicicletas_2.html)
+ - [código en html](https://ezegrenat.github.io/analisis-bicicletas-ecobici/analisis_bicicletas.html)
  - [repositorio en github](https://github.com/ezegrenat/analisis-bicicletas-ecobici)
