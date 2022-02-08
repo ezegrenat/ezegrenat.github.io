@@ -9,7 +9,7 @@ background: '/img/ecobici.jpg'
 ## Motivación y objetivo 
 En los últimos años el transporte en bicicleta ha ganado prominencia en la Ciudad de Buenos Aires, ofreciéndole a los ciudadanos beneficios para su salud, flexibilidad y evitar el costo que pueden traer otros medios de transporte.
 
-Cambios en la infraestructura, cómo son la implementación de la red de ciclovías y el Sistema de Transporte Público de Bicicletas (STPB), son claves para fomentar el uso de estas y transicionar hacia una ciudad con una movilidad más sustentable.
+Cambios en la infraestructura, como son la implementación de la red de ciclovías y el Sistema de Transporte Público de Bicicletas (STPB), son claves para fomentar el uso de estas y transicionar hacia una ciudad con una movilidad más sustentable.
 
 **El objetivo de este proyecto es utilizar distintas visualizaciones hechas en R para entender mejor cómo se dio el uso de las bicicletas EcoBici del STPB en 2021, bajo distintas condiciones como pueden ser las estacionarias, climatológicas y aquellas referidas a características del espacio urbano porteño.** 
 
