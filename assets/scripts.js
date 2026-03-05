@@ -79,6 +79,24 @@
 })();
 
 // ============================================================
+// READING PROGRESS BAR
+// ============================================================
+(function () {
+  var bar = document.getElementById('reading-progress');
+  if (!bar) return;
+
+  function updateProgress() {
+    var scrollTop  = window.scrollY || document.documentElement.scrollTop;
+    var docHeight  = document.documentElement.scrollHeight - window.innerHeight;
+    var progress   = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = Math.min(progress, 100) + '%';
+  }
+
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  updateProgress();
+})();
+
+// ============================================================
 // SMOOTH SCROLL for anchor links
 // ============================================================
 document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {

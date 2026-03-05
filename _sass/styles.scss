@@ -714,10 +714,28 @@ a:hover { color: var(--orange); }
 }
 
 /* ============================================
+   READING PROGRESS BAR
+   ============================================ */
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--orange), var(--blue));
+  z-index: 200;
+  transition: width 0.1s linear;
+  border-radius: 0 2px 2px 0;
+}
+
+/* ============================================
    POST / PAGE CONTENT
    ============================================ */
 .post-content {
   padding: 4rem 0;
+  background:
+    radial-gradient(ellipse at 80% 0%, rgba(249, 115, 22, 0.03) 0%, transparent 60%),
+    radial-gradient(ellipse at 20% 100%, rgba(59, 130, 246, 0.03) 0%, transparent 60%);
 }
 
 .post-content h2 {
