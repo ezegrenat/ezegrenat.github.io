@@ -3,50 +3,46 @@ layout: default
 ---
 
 <!-- Page Header -->
-{% if page.background %}
-<header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
-  {% else %}
-  <header class="masthead">
+<header class="page-header">
+  {% if page.background %}
+  <div style="position:absolute;inset:0;background-image:url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}');background-size:cover;background-position:center;opacity:0.12;"></div>
+  {% endif %}
+  <div class="container-narrow page-header-inner">
+    <span class="page-header-label">Análisis · Proyecto</span>
+    <h1>{{ page.title }}</h1>
+    {% if page.subtitle %}
+    <p class="page-header-subtitle">{{ page.subtitle }}</p>
     {% endif %}
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="post-heading">
-            <h1>{{ page.title }}</h1>
-            {% if page.subtitle %}
-            <h2 class="subheading">{{ page.subtitle }}</h2>
-            {% endif %}
-            <span class="meta">{{ page.date | date: '%B %d, %Y' }} &middot; {% include read_time.html
-              content=page.content %}
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-
-        {{ content }}
-
-        <hr>
-
-        <div class="clearfix">
-
-          {% if page.previous.url %}
-          <a class="btn btn-primary float-left" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}">&larr; Previous<span class="d-none d-md-inline">
-              Post</span></a>
-          {% endif %}
-          {% if page.next.url %}
-          <a class="btn btn-primary float-right" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">Next<span class="d-none d-md-inline">
-              Post</span> &rarr;</a>
-          {% endif %}
-
-        </div>
-
-      </div>
+    <div class="page-header-meta">
+      <span><i class="far fa-calendar-alt"></i> {{ page.date | date: '%d de %B de %Y' }}</span>
+      <span><i class="far fa-clock"></i> {% include read_time.html content=page.content %}</span>
     </div>
   </div>
+</header>
+
+<!-- Post Content -->
+<div class="post-content">
+  <div class="container-narrow">
+
+    {{ content }}
+
+    <!-- Post Navigation -->
+    {% if page.previous.url or page.next.url %}
+    <nav class="post-nav" aria-label="Navegación entre posts">
+      {% if page.previous.url %}
+      <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" class="prev">
+        <span class="post-nav-label"><i class="fas fa-arrow-left"></i> Anterior</span>
+        <span class="post-nav-title">{{ page.previous.title }}</span>
+      </a>
+      {% endif %}
+      {% if page.next.url %}
+      <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" class="next">
+        <span class="post-nav-label">Siguiente <i class="fas fa-arrow-right"></i></span>
+        <span class="post-nav-title">{{ page.next.title }}</span>
+      </a>
+      {% endif %}
+    </nav>
+    {% endif %}
+
+  </div>
+</div>

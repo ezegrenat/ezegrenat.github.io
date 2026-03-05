@@ -1,48 +1,63 @@
 ---
 layout: page
-title: Posts
-background: '/img/bg-post.jpg'
+title: Proyectos
+description: Análisis de datos, visualizaciones y proyectos de ciencia de datos.
 ---
 
-{% for post in paginator.posts %}
+<div class="posts-grid" style="margin-top:0">
+  {% for post in paginator.posts %}
+  <article class="post-card">
 
-<article class="post-preview">
-  <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-    <h2 class="post-title">{{ post.title }}</h2>
-    {% if post.subtitle %}
-    <h3 class="post-subtitle">{{ post.subtitle }}</h3>
+    {% if post.background %}
+    <img
+      src="{{ post.background | prepend: site.baseurl | replace: '//', '/' }}"
+      alt="{{ post.title | escape }}"
+      class="post-card-img"
+      loading="lazy"
+    >
     {% else %}
-    <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
+    <div class="post-card-img-placeholder" aria-hidden="true">📊</div>
     {% endif %}
-  </a>
-  <p class="post-meta">Posted by
-    {% if post.author %}
-    {{ post.author }}
-    {% else %}
-    {{ site.author }}
-    {% endif %}
-    on {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}
-  </p>
-</article>
 
-<hr>
+    <div class="post-card-body">
+      <div class="post-card-meta">
+        <span class="post-card-tag">Análisis</span>
+        <time datetime="{{ post.date | date_to_xmlschema }}">
+          {{ post.date | date: '%d %b %Y' }}
+        </time>
+        &middot; {% include read_time.html content=post.content %}
+      </div>
 
-{% endfor %}
+      <h2 class="post-card-title">{{ post.title }}</h2>
 
-<!-- Pager -->
-{% if paginator.total_pages > 1 %}
+      <p class="post-card-excerpt">
+        {% if post.subtitle %}
+          {{ post.subtitle }}
+        {% else %}
+          {{ post.excerpt | strip_html | truncatewords: 22 }}
+        {% endif %}
+      </p>
 
-<div class="clearfix">
-
-  {% if paginator.previous_page %}
-  <a class="btn btn-primary float-left" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr;
-    Newer<span class="d-none d-md-inline"> Posts</span></a>
-  {% endif %}
-
-  {% if paginator.next_page %}
-  <a class="btn btn-primary float-right" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older<span class="d-none d-md-inline"> Posts</span> &rarr;</a>
-  {% endif %}
-
+      <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" class="post-card-link">
+        Leer más <span class="post-card-link-arrow">→</span>
+      </a>
+    </div>
+  </article>
+  {% endfor %}
 </div>
 
+<!-- Paginación -->
+{% if paginator.total_pages > 1 %}
+<div style="display:flex;justify-content:space-between;margin-top:3rem;gap:1rem;">
+  {% if paginator.previous_page %}
+  <a class="btn-view-all" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+    <i class="fas fa-arrow-left"></i> Más recientes
+  </a>
+  {% endif %}
+  {% if paginator.next_page %}
+  <a class="btn-view-all" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" style="margin-left:auto">
+    Anteriores <i class="fas fa-arrow-right"></i>
+  </a>
+  {% endif %}
+</div>
 {% endif %}

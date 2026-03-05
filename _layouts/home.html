@@ -2,58 +2,106 @@
 layout: default
 ---
 
-<!-- Page Header -->
-{% if page.background %}
-<header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
-  {% else %}
-  <header class="masthead">
-    {% endif %}
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="page-heading">
-            <h1>{{ site.title }}</h1>
-            {% if site.description %}
-            <span class="subheading">{{ site.description }}</span>
-            {% endif %}
-          </div>
-        </div>
-      </div>
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero">
+  <!-- Animated background blobs -->
+  <div class="hero-blob hero-blob--1"></div>
+  <div class="hero-blob hero-blob--2"></div>
+  <div class="hero-blob hero-blob--3"></div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <i class="fas fa-chart-line"></i>
+      Data Scientist · Buenos Aires, Argentina
     </div>
-  </header>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
+    <h1 class="hero-title">
+      Hola, soy<br>
+      <span>Ezequiel Grenat</span>
+    </h1>
 
-        {{ content }}
+    <p class="hero-subtitle">
+      Estudiante de Licenciatura en Ciencia de Datos en la UBA.<br>
+      Analizo datos y construyo visualizaciones para entender el mundo.
+    </p>
 
-        <!-- Home Post List -->
-        {% for post in site.posts limit : 5 %}
-
-        <article class="post-preview">
-          <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-            <h2 class="post-title">{{ post.title }}</h2>
-            {% if post.subtitle %}
-            <h3 class="post-subtitle">{{ post.subtitle }}</h3>
-            {% else %}
-            <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
-            {% endif %}
-          </a>
-          <p class="post-meta">{{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}            
-          </p>
-        </article>
-
-        <hr>
-
-        {% endfor %}
-
-        <!-- Pager -->
-        <div class="clearfix">
-          <a class="btn btn-primary float-right" href="{{"/posts" | relative_url }}">View All Posts &rarr;</a>
-        </div>
-
-      </div>
+    <div class="hero-cta">
+      <a href="{{ "/posts" | relative_url }}" class="btn btn-primary">
+        <i class="fas fa-book-open"></i> Ver proyectos
+      </a>
+      <a href="{{ "/about" | relative_url }}" class="btn btn-outline">
+        Acerca de mí <i class="fas fa-arrow-right"></i>
+      </a>
     </div>
   </div>
+
+  <!-- Scroll indicator -->
+  <div class="scroll-indicator" aria-hidden="true">scroll</div>
+</section>
+
+<!-- ============================================================
+     POSTS / PROYECTOS
+     ============================================================ -->
+<section class="section">
+  <div class="container">
+
+    <div class="section-header fade-in">
+      <div class="section-label">Proyectos</div>
+      <h2 class="section-title">Últimos análisis y trabajos</h2>
+    </div>
+
+    <div class="posts-grid">
+      {% for post in site.posts limit: 6 %}
+      <article class="post-card">
+
+        {% if post.background %}
+        <img
+          src="{{ post.background | prepend: site.baseurl | replace: '//', '/' }}"
+          alt="{{ post.title | escape }}"
+          class="post-card-img"
+          loading="lazy"
+        >
+        {% else %}
+        <div class="post-card-img-placeholder" aria-hidden="true">📊</div>
+        {% endif %}
+
+        <div class="post-card-body">
+          <div class="post-card-meta">
+            <span class="post-card-tag">Análisis</span>
+            <time datetime="{{ post.date | date_to_xmlschema }}">
+              {{ post.date | date: '%d %b %Y' }}
+            </time>
+            &middot; {% include read_time.html content=post.content %}
+          </div>
+
+          <h3 class="post-card-title">{{ post.title }}</h3>
+
+          <p class="post-card-excerpt">
+            {% if post.subtitle %}
+              {{ post.subtitle }}
+            {% else %}
+              {{ post.excerpt | strip_html | truncatewords: 22 }}
+            {% endif %}
+          </p>
+
+          <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" class="post-card-link">
+            Leer más <span class="post-card-link-arrow">→</span>
+          </a>
+        </div>
+
+      </article>
+      {% endfor %}
+    </div>
+
+    {% if site.posts.size > 6 %}
+    <div class="view-all-wrap fade-in">
+      <a href="{{ "/posts" | relative_url }}" class="btn-view-all">
+        Ver todos los proyectos <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+    {% endif %}
+
+  </div>
+</section>
