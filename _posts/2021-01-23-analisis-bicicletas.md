@@ -1,5 +1,6 @@
 ---
 layout: post
+published: false
 title: "Análisis del uso de bicicletas públicas en la Ciudad de Buenos Aires"
 subtitle: "Limpieza, exploración y breve análisis de datos con R para entender mejor el uso de estas en 2021"
 type: proyecto
