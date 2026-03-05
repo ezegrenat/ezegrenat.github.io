@@ -56,6 +56,7 @@ layout: default
       {% for post in site.posts limit: 6 %}
       <article class="post-card">
 
+        {% unless post.link %}
         {% if post.background %}
         <img
           src="{{ post.background | prepend: site.baseurl | replace: '//', '/' }}"
@@ -66,6 +67,7 @@ layout: default
         {% else %}
         <div class="post-card-img-placeholder" aria-hidden="true">📊</div>
         {% endif %}
+        {% endunless %}
 
         <div class="post-card-body">
           <div class="post-card-meta">
@@ -75,8 +77,10 @@ layout: default
               <span class="post-card-tag">Proyecto</span>
             {% endif %}
             {% assign display_date = post.repo_date | default: post.date %}
+            {% assign months_es = "enero,febrero,marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre" | split: "," %}
+            {% assign month_idx = display_date | date: '%m' | plus: 0 | minus: 1 %}
             <time datetime="{{ display_date | date_to_xmlschema }}">
-              <i class="far fa-calendar-alt"></i> {{ display_date | date: '%d/%m/%Y' }}
+              <i class="far fa-calendar-alt"></i> {{ months_es[month_idx] | capitalize }} {{ display_date | date: '%Y' }}
             </time>
             &middot; {% include read_time.html content=post.content %}
           </div>
