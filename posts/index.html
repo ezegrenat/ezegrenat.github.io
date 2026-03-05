@@ -21,9 +21,14 @@ description: Análisis de datos, visualizaciones y proyectos de ciencia de datos
 
     <div class="post-card-body">
       <div class="post-card-meta">
-        <span class="post-card-tag">Análisis</span>
-        <time datetime="{{ post.date | date_to_xmlschema }}">
-          {{ post.date | date: '%d %b %Y' }}
+        {% if post.type == "ensayo" %}
+          <span class="post-card-tag post-card-tag--ensayo">Ensayo</span>
+        {% else %}
+          <span class="post-card-tag">Proyecto</span>
+        {% endif %}
+        {% assign display_date = post.repo_date | default: post.date %}
+        <time datetime="{{ display_date | date_to_xmlschema }}">
+          <i class="far fa-calendar-alt"></i> {{ display_date | date: '%d/%m/%Y' }}
         </time>
         &middot; {% include read_time.html content=post.content %}
       </div>
@@ -38,9 +43,15 @@ description: Análisis de datos, visualizaciones y proyectos de ciencia de datos
         {% endif %}
       </p>
 
-      <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" class="post-card-link">
-        Leer más <span class="post-card-link-arrow">→</span>
-      </a>
+      {% if post.link %}
+        <a href="{{ post.link }}" target="_blank" rel="noopener" class="post-card-link">
+          <i class="fab fa-github"></i> Ver repositorio <span class="post-card-link-arrow">→</span>
+        </a>
+      {% else %}
+        <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" class="post-card-link">
+          Leer más <span class="post-card-link-arrow">→</span>
+        </a>
+      {% endif %}
     </div>
   </article>
   {% endfor %}

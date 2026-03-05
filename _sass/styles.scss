@@ -52,17 +52,18 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  font-size: 1.125rem;
   background: var(--bg);
   color: var(--text);
   transition: background var(--transition), color var(--transition);
-  line-height: 1.7;
+  line-height: 1.75;
   -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Impact', 'Haettenschweiler', 'Arial Narrow Bold', sans-serif;
-  font-weight: normal;
-  letter-spacing: 0.02em;
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 img { max-width: 100%; height: auto; display: block; }
@@ -333,9 +334,9 @@ a:hover { color: var(--orange); }
 }
 
 .hero-title {
-  font-size: clamp(2.75rem, 7vw, 5.5rem);
+  font-size: clamp(2.25rem, 5.5vw, 4.25rem);
   color: #fff;
-  line-height: 1.05;
+  line-height: 1.15;
   margin: 0 0 1.25rem;
   animation: fadeUp 0.9s 0.2s cubic-bezier(0.4, 0, 0.2, 1) both;
 }
@@ -570,7 +571,7 @@ a:hover { color: var(--orange); }
 }
 
 .post-card-tag {
-  background: linear-gradient(135deg, rgba(249, 115, 22, 0.12), rgba(59, 130, 246, 0.12));
+  background: rgba(249, 115, 22, 0.10);
   color: var(--orange);
   padding: 0.2rem 0.65rem;
   border-radius: 999px;
@@ -579,6 +580,12 @@ a:hover { color: var(--orange); }
   text-transform: uppercase;
   letter-spacing: 0.06em;
   border: 1px solid rgba(249, 115, 22, 0.2);
+  font-family: 'Inter', system-ui, sans-serif;
+}
+.post-card-tag--ensayo {
+  background: rgba(59, 130, 246, 0.10);
+  color: var(--blue);
+  border-color: rgba(59, 130, 246, 0.2);
 }
 
 .post-card-title {

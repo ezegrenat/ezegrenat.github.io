@@ -1,154 +1,216 @@
-# [Start Bootstrap - Clean Blog Jekyll](https://startbootstrap.com/themes/clean-blog-jekyll/) - Official Jekyll Version
+# ezegrenat.github.io
 
-[Clean Blog Jekyll](https://startbootstrap.com/themes/clean-blog-jekyll/) is a stylish, responsive blog theme for [Bootstrap](https://getbootstrap.com/) created by [Start Bootstrap](https://startbootstrap.com/). This theme features a blog homepage, about page, contact page, and an example post page along with a working contact form powered by [Formspree](https://formspree.io/).
+Portfolio personal y blog de proyectos de ciencia de datos, construido con Jekyll y hosteado en GitHub Pages. El diseño es completamente custom — sin Bootstrap ni frameworks externos — con un sistema de componentes en CSS vanilla, dark mode automático y animaciones CSS.
 
-This repository holds the official Jekyll version of the Clean Blog theme on Start Bootstrap!
+**[Ver sitio en vivo →](https://ezegrenat.github.io)**
 
-## Preview
+---
 
-[![Clean Blog (Jekyll) Preview](https://startbootstrap.com/assets/img/screenshots/themes/clean-blog-jekyll.png)](http://StartBootstrap.github.io/startbootstrap-clean-blog-jekyll/)
+## Estructura del repositorio
 
-**[View Live Preview](http://StartBootstrap.github.io/startbootstrap-clean-blog-jekyll/)**
+```
+ezegrenat.github.io/
+│
+├── _posts/                  # Publicaciones (proyectos y ensayos)
+├── _drafts/                 # Borradores (no se publican)
+├── _layouts/                # Plantillas de página
+│   ├── default.html         # Base: navbar + footer + scripts
+│   ├── home.html            # Página principal: hero + grid de cards
+│   ├── post.html            # Página de un post individual
+│   └── page.html            # Página estática (About, etc.)
+├── _includes/               # Componentes reutilizables
+│   ├── head.html            # <head>: meta, fuentes, CSS
+│   ├── navbar.html          # Navegación sticky con glassmorphism
+│   ├── footer.html          # Footer con links sociales
+│   ├── scripts.html         # Scripts JS al final del body
+│   ├── read_time.html       # Calcula tiempo estimado de lectura
+│   └── google-analytics.html
+├── _sass/
+│   └── styles.scss          # Todo el CSS del sitio (design system completo)
+├── assets/
+│   ├── main.scss            # Punto de entrada SCSS (Jekyll lo compila)
+│   └── scripts.js           # JS vanilla: dark mode, nav mobile, animaciones
+├── img/                     # Imágenes del sitio
+├── posts/
+│   └── index.html           # Listado paginado de todos los posts
+├── about.md                 # Página "Acerca de mí"
+├── contact.html             # Página de contacto
+└── _config.yml              # Configuración de Jekyll
+```
 
-## Installation & Setup
+---
 
-### Using RubyGems
+## Tecnologías
 
-When installing the theme using RubyGems, demo images, posts, and pages are not included. Follow the instructions below for complete setup.
+- **Jekyll** — generador de sitios estáticos, corre en GitHub Pages sin configuración adicional
+- **SCSS** — compilado por Jekyll a CSS, un solo archivo en `_sass/styles.scss`
+- **CSS vanilla** — sin Bootstrap ni ningún framework de estilos externo
+- **JS vanilla** — sin jQuery. Maneja dark mode, navegación mobile e Intersection Observer para animaciones
+- **Google Fonts** — Inter (UI) + Lora (cuerpo de texto), cargadas de forma gratuita
+- **Font Awesome 5** — íconos, cargado desde CDN gratuito
 
-1. (Optional) Create a new Jekyll site: `jekyll new my-site`
-2. Replace the current theme in your `Gemfile` with `gem "jekyll-theme-clean-blog"`.
-3. Install the theme (run the command inside your site directory): `bundle install`
-4. Replace the current theme in your `_config.yml` file with `theme: jekyll-theme-clean-blog`.
-5. Build your site: `bundle exec jekyll serve`
+---
 
-Assuming there are no errors and the site is building properly, follow these steps next:
+## Sistema de diseño
 
-1. Create the following pages if they do not exist already (or change the extension of existing markdown files from `.md` to `.html`):
+El sitio usa CSS custom properties para todos los valores de diseño, lo que hace que el dark mode funcione con un solo atributo en el `<html>`:
 
-   * `index.html` - set to `layout: home`
-   * `about.html` - set to `layout: page`
-   * `contact.html` - set to `layout: page`
-   * `posts/index.html` - set to `layout: page` (you will also need to create a `posts` directory)
+```css
+:root {
+  --orange:     #F97316;
+  --blue:       #3B82F6;
+  --bg:         #F8FAFC;
+  --surface:    #FFFFFF;
+  --text:       #0F172A;
+  /* ... */
+}
 
-2. Configure the `index.html` front matter. Example:
+[data-theme="dark"] {
+  --bg:         #0F172A;
+  --surface:    #1E293B;
+  --text:       #F1F5F9;
+  /* ... */
+}
+```
 
-    ```markdown
-    ---
-    layout: home
-    background: '/PATH_TO_IMAGE'
-    ---
-    ```
+**Tipografía:**
+- Headers (`h1`–`h6`): **Impact** — contundente, editorial
+- Cuerpo de texto: **Lora** — serif clásica, muy legible en pantalla
+- UI (navbar, botones, labels): **Inter** — sans-serif limpia
 
-3. Configure the `about.html`, `contact.html`, and `posts/index.html` front matter. Example:
+---
 
-    ```markdown
-    ---
-    layout: page
-    title: Page Title
-    description: This is the page description.
-    background: '/PATH_TO_IMAGE'
-    ---
-    ```
+## Agregar una publicación
 
-4. For each post in the `_posts` directory, update the front matter. Example:
+Todos los posts viven en `_posts/` con el formato de nombre `YYYY-MM-DD-titulo-del-post.md`.
 
-    ```markdown
-    ---
-    layout: post
-    title: "Post Title"
-    subtitle: "This is the post subtitle."
-    date: YYYY-MM-DD HH:MM:SS
-    background: '/PATH_TO_IMAGE'
-    ---
-    ```
+### Front matter disponible
 
-    For reference, look at the [demo repository](https://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll) to see how the files are set up.
+```yaml
+---
+layout: post
+title: "Título de la publicación"
+subtitle: "Descripción breve que aparece en las cards"
+date: 2024-06-01
+type: proyecto          # "proyecto" (naranja) o "ensayo" (azul)
+background: '/img/imagen-de-portada.jpg'   # opcional
+link: "https://github.com/ezegrenat/repo"  # opcional — ver más abajo
+repo_date: 2024-03-15                      # opcional — ver más abajo
+---
+```
 
-5. Add the form to the `contact.html` page. Add the following code to your `contact.html` page:
+### Tipos de publicación
 
-    ```html
-    <form name="sentMessage" id="contactForm" novalidate>
-      <div class="control-group">
-        <div class="form-group floating-label-form-group controls">
-          <label>Name</label>
-          <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
-          <p class="help-block text-danger"></p>
-        </div>
-      </div>
-      <div class="control-group">
-        <div class="form-group floating-label-form-group controls">
-          <label>Email Address</label>
-          <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
-          <p class="help-block text-danger"></p>
-        </div>
-      </div>
-      <div class="control-group">
-        <div class="form-group col-xs-12 floating-label-form-group controls">
-          <label>Phone Number</label>
-          <input type="tel" class="form-control" placeholder="Phone Number" id="phone" required data-validation-required-message="Please enter your phone number.">
-          <p class="help-block text-danger"></p>
-        </div>
-      </div>
-      <div class="control-group">
-        <div class="form-group floating-label-form-group controls">
-          <label>Message</label>
-          <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
-          <p class="help-block text-danger"></p>
-        </div>
-      </div>
-      <br>
-      <div id="success"></div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary" id="sendMessageButton">Send</button>
-      </div>
-    </form>
-    ```
+El campo `type` controla el tag que aparece en la card:
 
-    Make sure you have the `email` setting in your `_config.yml` file set to a working email address! Once this is set, fill out the form and then check your email, verify the email address using the link sent to you by Formspree, and then the form will be working!
+| Valor | Tag | Color |
+|-------|-----|-------|
+| `proyecto` | Proyecto | Naranja |
+| `ensayo` | Ensayo | Azul |
 
-6. Build your site: `bundle exec jekyll serve`
+Si no se especifica `type`, por defecto se muestra "Proyecto".
 
-### Using Core Files
+### Fecha de creación del repositorio
 
-When using the core files, the demo images, posts, and pages are all included with the download. After following the instructions below, you can then go and change the content of the pages and posts.
+El campo `repo_date` es opcional. Si se define, la card muestra esa fecha en lugar del campo `date` del post. Útil cuando la fecha en que escribiste el post difiere de cuándo creaste el repositorio en GitHub.
 
-1. [Download](https://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll/archive/master.zip) or Clone the repository.
-2. Update the following configuration settings in your `_config.yml` file:
+```yaml
+repo_date: 2023-08-20   # fecha de creación del repo en GitHub
+```
 
-    * `baseurl`
-    * `url`
-    * `title`
-    * `email` (after setting this setting to a working email address, fill out the form on the contact page and send it - then check your email and verify the address and the form will send you messages when used)
-    * `description`
-    * `author`
-    * `twitter_username` (Optional)
-    * `facebook_username` (Optional)
-    * `github_username` (Optional)
-    * `linkedin_username` (Optional)
-    * `instagram_username` (Optional)
+Si no se especifica, la card usa automáticamente el campo `date` del post como fallback.
 
-3. Build your site: `bundle exec jekyll serve`
+### Redirección a un repositorio externo
 
-## Bugs and Issues
+El campo `link` es opcional. Si se define, el botón de la card apunta directamente a esa URL (en una pestaña nueva) en lugar de abrir la página del post en el sitio.
 
-Have a bug or an issue with this template? [Open a new issue](https://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll/issues) here on GitHub!
+Esto es útil para proyectos que ya tienen su propia documentación en GitHub:
 
-## About
+```yaml
+# Con link → la card redirige al repositorio de GitHub
+---
+layout: post
+title: "Análisis de texto con NLP"
+type: proyecto
+link: "https://github.com/ezegrenat/nlp-analisis"
+---
 
-Start Bootstrap is an open source library of free Bootstrap templates and themes. All of the free templates and themes on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
+# Sin link → la card abre la página del post en el sitio
+---
+layout: post
+title: "Por qué los datos no son neutrales"
+type: ensayo
+---
+```
 
-* <https://startbootstrap.com>
-* <https://twitter.com/SBootstrap>
+---
 
-Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**.
+## Dark mode
 
-* <http://davidmiller.io>
-* <https://twitter.com/davidmillerhere>
-* <https://github.com/davidtmiller>
+El tema se detecta automáticamente según la preferencia del sistema operativo (`prefers-color-scheme`). El usuario puede cambiarlo manualmente con el botón 🌙 en la navbar — la preferencia queda guardada en `localStorage`.
 
-Start Bootstrap is based on the [Bootstrap](https://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
+Para evitar el "flash" de contenido sin estilos al cargar la página, el tema se aplica en el `<head>` antes de que el navegador pinte nada:
 
-## Copyright and License
+```html
+<script>
+  var stored  = localStorage.getItem('theme');
+  var prefer  = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  document.documentElement.setAttribute('data-theme', stored || prefer);
+</script>
+```
 
-Copyright 2013-2021 Start Bootstrap LLC. Code released under the [MIT](https://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll/blob/master/LICENSE) license.
+---
+
+## Configuración del sitio
+
+Los datos del sitio se configuran en `_config.yml`:
+
+```yaml
+title:       Portfolio de Ezequiel Grenat
+email:       ezequielggrenat@gmail.com
+description: Data scientist | Estudiante de Ciencia de Datos
+url:         "https://ezegrenat.github.io"
+```
+
+Los links de redes sociales en el footer se activan descomentando las variables correspondientes en `_config.yml`:
+
+```yaml
+twitter_username:   tu_usuario
+github_username:    tu_usuario
+linkedin_username:  tu_usuario
+instagram_username: tu_usuario
+```
+
+---
+
+## Correr el sitio localmente
+
+```bash
+# Instalar dependencias
+bundle install
+
+# Levantar servidor de desarrollo (con live reload)
+bundle exec jekyll serve
+
+# El sitio queda disponible en http://localhost:4000
+```
+
+Para ver los drafts de `_drafts/` también:
+
+```bash
+bundle exec jekyll serve --drafts
+```
+
+---
+
+## Deploy
+
+El sitio se deploya automáticamente en GitHub Pages cada vez que se hace un push a la rama `master`. No hay ningún paso adicional — GitHub Pages detecta que es un sitio Jekyll y lo compila solo.
+
+```bash
+git add .
+git commit -m "descripción del cambio"
+git push origin master
+```
+
+Los cambios tardan entre 1 y 3 minutos en verse reflejados en `https://ezegrenat.github.io`.
