@@ -6,9 +6,7 @@ type: informe
 background: '/img/alignment-faking/fig1-resultados-tres-experimentos.png'
 ---
 
-*Materia: Fundamentos de AI Safety — Profesor: Sergio Abriola — Primer Cuatrimestre 2025*
-
----
+> **Aviso justo:** AI Safety es un área que se mueve a una velocidad un poco ridícula. Los papers no esperan a nadie, y hay chances no despreciables de que algo de lo que está acá ya haya sido superado, refinado, o directamente contradicho por algún trabajo publicado la semana pasada. Dicho esto, el post sigue siendo útil si lo que querés es entender bien los papers en sí mismos: qué hicieron, qué encontraron, qué limitaciones tienen. Para eso no caduca tan rápido.
 
 ## Introducción
 
@@ -62,7 +60,7 @@ Tal como se comentó en la sección anterior, en esta experimentación se utiliz
 
 <figure>
   <img src="/img/alignment-faking/fig1-resultados-tres-experimentos.png" alt="Resultados de los tres experimentos de alignment faking">
-  <figcaption><strong>Figure 1.</strong> Resultados de los tres experimentos. Las barras apiladas representan distintos comportamientos observados, donde el tamaño de cada área corresponde a la frecuencia relativa de ese comportamiento. Las barras azules corresponden a aquellos casos en los que el modelo rechaza el pedido del prompt, las amarillas a aquellos en los que sí lo responde, y tachadas en rojo a aquellos en los que sí lo responde y además hace <em>alignment faking</em>.</figcaption>
+  <figcaption><small>Resultados de los tres experimentos. Las barras apiladas representan distintos comportamientos observados, donde el tamaño de cada área corresponde a la frecuencia relativa de ese comportamiento. Las barras azules corresponden a aquellos casos en los que el modelo rechaza el pedido del prompt, las amarillas a aquellos en los que sí lo responde, y tachadas en rojo a aquellos en los que sí lo responde y además hace <em>alignment faking</em>.</small></figcaption>
 </figure>
 
 **Prompt**
@@ -107,7 +105,7 @@ En los distintos ejemplos que se muestran en el trabajo puede observarse un comp
 
 <figure>
   <img src="/img/alignment-faking/fig2-compliance-gap-tabla.png" alt="Tabla de compliance gap bajo distintas variantes de la experimentación 1">
-  <figcaption><strong>Figure 2.</strong> Tasa de alignment-faking reasoning, tasa de rechazos y compliance gap bajo distintas variantes de la experimentación 1 (via prompting). Extraído de Greenblatt et al. (2024). El compliance gap se calcula como la diferencia entre la tasa de rechazos en contextos en los que el modelo es consciente de ser monitoreado y contextos en los que no. Adicionalmente se muestra su desvío estándar.</figcaption>
+  <figcaption><small>Tasa de alignment-faking reasoning, tasa de rechazos y compliance gap bajo distintas variantes de la experimentación 1 (via prompting). Extraído de Greenblatt et al. (2024). El compliance gap se calcula como la diferencia entre la tasa de rechazos en contextos en los que el modelo es consciente de ser monitoreado y contextos en los que no. Adicionalmente se muestra su desvío estándar.</small></figcaption>
 </figure>
 
 Se puede observar que remover completamente del prompt la mención al nuevo objetivo de RLHF (fila a) elimina el *alignment faking* por completo y produce una tasa de rechazo casi perfecta, con un *compliance gap* de apenas 1.2%. Cuando se provee más información sobre el contexto de entrenamiento, el *compliance gap* aumenta, como puede verse en las filas c y d. Para la experimentación 1 se encontró también que **el borrador de Chain-of-Thought es crucial**: al eliminarlo en Claude 3.5 Sonnet el *compliance gap* baja significativamente, y en Claude 3 queda reducido en su totalidad.
@@ -178,7 +176,7 @@ Como se vio al comentar el trabajo anterior, los modelos de lenguaje que utiliza
 
 <figure>
   <img src="/img/alignment-faking/fig3-performance-self-monitor.png" alt="Performance de modelos con fine-tuning basado en self-monitor">
-  <figcaption><strong>Figure 3.</strong> Performance de los modelos que utilizan un fine-tuning basado en self-monitor (7B es Qwen2.5-7B-Instruct y 8B Llama-3.1-8B-Instruct) comparado con otros modelos que no lo utilizaron.</figcaption>
+  <figcaption><small>Performance de los modelos que utilizan un fine-tuning basado en self-monitor (7B es Qwen2.5-7B-Instruct y 8B Llama-3.1-8B-Instruct) comparado con otros modelos que no lo utilizaron.</small></figcaption>
 </figure>
 
 Se realizó *fine-tuning* de Qwen2.5-7B-Instruct y Llama-3.1-8B-Instruct para que, mediante *self-monitoring*, sus borradores de Chain-of-Thought fueran menos engañosos, y se comparó la DTR de estos modelos con la de otros sin ese *fine-tuning*. Como resultado, se observó una **mejora de los modelos con fine-tuning respecto al resto**. Por ejemplo, en el modelo Qwen2.5-7B, el valor bajó de 0.272 (modelo instruct base con CoT) a 0.156 en la variante SELF-MONITOR.
@@ -195,7 +193,7 @@ Ambas métricas utilizan GPT-4o.
 
 <figure>
   <img src="/img/alignment-faking/fig4-comparacion-rl.png" alt="Comparación entre tres configuraciones de entrenamiento con RL">
-  <figcaption><strong>Figure 4.</strong> Comparación entre tres configuraciones de entrenamiento. A la izquierda, se utiliza sólo un verificador que evalúa la respuesta final del modelo; en el centro, se agrega además un verificador externo que revisa el razonamiento intermedio; y a la derecha, el propio modelo evalúa internamente su razonamiento utilizando SELF-MONITOR.</figcaption>
+  <figcaption><small>Comparación entre tres configuraciones de entrenamiento. A la izquierda, se utiliza sólo un verificador que evalúa la respuesta final del modelo; en el centro, se agrega además un verificador externo que revisa el razonamiento intermedio; y a la derecha, el propio modelo evalúa internamente su razonamiento utilizando SELF-MONITOR.</small></figcaption>
 </figure>
 
 Los resultados muestran que, en comparación con configuraciones de RL que utilizan únicamente un *action monitor* externo o un verificador externo de CoT, **el uso de *self-monitor* como señal de recompensa permite mantener valores bajos en ambas métricas**.
@@ -217,6 +215,8 @@ A lo largo del informe hemos visto evidencia empírica y distintos benchmarks de
 - **Sería relevante estudiar qué valores son más fáciles de preservar o fingir.** La discusión planteada por Jan Kulveit sobre la preservación diferencial de preferencias (particularmente honestidad frente a inofensividad en el trabajo de Greenblatt et al.) abre una línea conceptual interesante para futuros trabajos: explorar cuáles valores son más propensos a ser preservados o fingidos por los modelos. Más allá del debate terminológico, la perspectiva de Kulveit permite descomponer el problema de *alignment faking* en componentes más específicos sobre los cuales investigar, en lugar de tratarlo solo como una propiedad global del sistema.
 
 ---
+
+*Este texto es una versión editada de un informe académico realizado para la materia Fundamentos de AI Safety (Prof. Sergio Abriola), Primer Cuatrimestre 2025.*
 
 ## Referencias
 
