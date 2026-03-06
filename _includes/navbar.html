@@ -5,8 +5,8 @@
 
   <div class="nav-right">
     <ul class="nav-links" id="nav-links">
-      <li><a href="{{ "/" | relative_url }}">Inicio</a></li>
-      <li><a href="{{ "/about" | relative_url }}">Acerca de mí</a></li>
+      <li><a href="{{ "/" | relative_url }}" {% if page.url == "/" %}class="active"{% endif %}>Inicio</a></li>
+      <li><a href="{{ "/about" | relative_url }}" {% if page.url contains "about" %}class="active"{% endif %}>Acerca de mí</a></li>
       <li><a href="https://github.com/ezegrenat" target="_blank" rel="noopener">GitHub</a></li>
       <li><a href="https://www.linkedin.com/in/ezequiel-grenat-b28b99142/" target="_blank" rel="noopener">LinkedIn</a></li>
     </ul>
