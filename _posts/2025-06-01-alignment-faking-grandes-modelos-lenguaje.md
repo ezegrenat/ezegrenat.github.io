@@ -3,7 +3,7 @@ layout: post
 title: "Alignment faking en grandes modelos de lenguaje"
 subtitle: "Informe sobre el fenómeno de alignment faking: evidencia empírica, mecanismos de mitigación y discusión conceptual."
 type: informe
-background: '/img/alignment-faking/fig1-resultados-tres-experimentos.png'
+
 ---
 
 > **Aviso justo:** AI Safety es un área que se mueve a una velocidad un poco ridícula. Los papers no esperan a nadie, y hay chances no despreciables de que algo de lo que está acá ya haya sido superado, refinado, o directamente contradicho por algún trabajo publicado la semana pasada. Dicho esto, el post sigue siendo útil si lo que querés es entender bien los papers en sí mismos: qué hicieron, qué encontraron, qué limitaciones tienen. Para eso no caduca tan rápido.
