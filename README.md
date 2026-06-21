@@ -57,18 +57,19 @@ El sitio usa CSS custom properties para todos los valores de diseño, lo que hac
 
 ```css
 :root {
-  --orange:     #F97316;
-  --blue:       #3B82F6;
-  --bg:         #F8FAFC;
+  --orange:     #E08A1E;
+  --gold:       #D4A017;
+  --blue:       #2F6B5E;
+  --bg:         #F4EEE5;
   --surface:    #FFFFFF;
-  --text:       #0F172A;
+  --text:       #1C1A17;
   /* ... */
 }
 
 [data-theme="dark"] {
-  --bg:         #0F172A;
-  --surface:    #1E293B;
-  --text:       #F1F5F9;
+  --bg:         #1A1714;
+  --surface:    #262220;
+  --text:       #F1E9DC;
   /* ... */
 }
 ```
